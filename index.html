@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bangla Synonym Explorer — বাংলা প্রতিশব্দ ও বিপরীতশব্দ</title>
+<meta name="description" content="Offline bilingual Bangla synonym and antonym explorer: 48 common words, word of the day, a 10-round quiz, and saved favorites.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="topbar"><button id="lang-toggle" type="button">বাংলা</button></div>
+  <h1>বাংলা প্রতিশব্দ · Bangla Synonym Explorer</h1>
+  <p id="tagline">Explore Bangla synonyms &amp; antonyms</p>
+</header>
+<main>
+  <nav class="tabs" aria-label="Sections">
+    <button class="tab active" data-tab="explore" type="button">Explore</button>
+    <button class="tab" data-tab="wotd" type="button">Word of the Day</button>
+    <button class="tab" data-tab="quiz" type="button">Quiz</button>
+    <button class="tab" data-tab="favorites" type="button">Favorites</button>
+  </nav>
+
+  <section id="tab-explore">
+    <input id="search" type="search" placeholder="Search a word, meaning, synonym…" aria-label="Search words">
+    <div id="categories" role="group" aria-label="Categories"></div>
+    <p id="result-count"></p>
+    <div id="word-list" class="grid"></div>
+  </section>
+
+  <section id="tab-wotd" hidden>
+    <div id="wotd-card" class="grid"></div>
+  </section>
+
+  <section id="tab-quiz" hidden>
+    <div id="quiz-box"></div>
+  </section>
+
+  <section id="tab-favorites" hidden>
+    <div class="fav-actions">
+      <button id="export-btn" class="btn" type="button">Export favorites</button>
+      <button id="import-btn" class="btn" type="button">Import favorites</button>
+      <button id="clear-btn" class="btn" type="button">Clear favorites</button>
+      <input id="import-file" type="file" accept="application/json,.json" hidden>
+    </div>
+    <p id="fav-note" aria-live="polite"></p>
+    <div id="fav-list" class="grid"></div>
+  </section>
+</main>
+<footer>
+  <p>Personal learning tool. Meanings shown are the commonly given ones; this is not an academic dictionary. Works fully offline — your favorites never leave your device.</p>
+</footer>
+<script src="js/data.js"></script>
+<script src="js/logic.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

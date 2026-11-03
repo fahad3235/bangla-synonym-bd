@@ -1,0 +1,10 @@
+# Local / OS artifacts
+.DS_Store
+Thumbs.db
+
+# Node (tests only; no dependencies are required)
+node_modules/
+
+# Editor files
+.vscode/
+*.swp
